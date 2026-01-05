@@ -31,7 +31,6 @@ class _AddEditStudentState extends State<AddEditStudent> {
       imagePath = widget.student!.imagePath;
     }
   }
-
   Future<void> pickImage() async {
     final picker = ImagePicker();
     final image = await picker.pickImage(source: ImageSource.gallery);
@@ -39,7 +38,6 @@ class _AddEditStudentState extends State<AddEditStudent> {
       setState(() => imagePath = image.path);
     }
   }
-
   void saveStudent() async {
     if (nameCtrl.text.isEmpty || ageCtrl.text.isEmpty) return;
 
@@ -67,12 +65,10 @@ class _AddEditStudentState extends State<AddEditStudent> {
         imagePath: imagePath,
       );
     }
-
     await StudentStorage.saveStudents(students);
     if (!mounted) return;
     Navigator.pop(context);
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,7 +110,7 @@ class _AddEditStudentState extends State<AddEditStudent> {
              SizedBox(height: 20),
             ElevatedButton(
               onPressed: saveStudent, 
-              child:  Text('Save')),
+             child:  Text('Save')),
           ],
         ),
       ),
