@@ -72,7 +72,7 @@ class _AddEditStudentState extends State<AddEditStudent> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 223, 202, 171),
+      backgroundColor: const Color.fromARGB(255, 255, 200, 177),
       appBar: AppBar(
         title: Text(widget.student == null ? 'Add Student' : 'Edit Student'),
       ),
