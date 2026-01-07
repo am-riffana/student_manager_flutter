@@ -12,7 +12,7 @@ class StudentDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Student Profile'),
+        title:  Text('Student Profile'),
         actions: [
           IconButton(
             icon: const Icon(Icons.edit),
@@ -29,7 +29,7 @@ class StudentDetail extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16),
+        padding:  EdgeInsets.all(16),
         child: Column(
           children: [
             CircleAvatar(
@@ -37,8 +37,8 @@ class StudentDetail extends StatelessWidget {
               backgroundImage:
                   student.imagePath.isNotEmpty ? FileImage(File(student.imagePath)) : null,
             ),
-            const SizedBox(height: 20),
-            Text('Name: ${student.name}', style: const TextStyle(fontSize: 18)),
+             SizedBox(height: 20),
+            Text('Name: ${student.name}', style:  TextStyle(fontSize: 18)),
             Text('Age: ${student.age}'),
             Text('Class: ${student.studentClass}'),
             Text('Address: ${student.address}'),
